@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <h1>=== TICKET DE COMPRA ====</h1>
+    <div class="ingreso">
+        <div class="entradas" id="entradaArt">
+            <p>Articulo</p>
+            <input type="text" id="articulo" >
+
+        </div>
+        <div class="entradas" id="EntradaPre">
+            <p>Precio</p>
+            <input type="text" id="precio" onkeypress="if(event.keyCode==13)
+            calcularTotal()">
+        </div>
+        <button onclick="calcularTotal()"  class="botonCalcular">Calcular total</button>
+    </div>
+    <p>======== TU TICKET =========</p>
+    <ul id="lista"></ul>
+    
+
+    <p>---------------------------------------------</p>
+    <p id="txtPrecio"><b>TOTAL $<span id="total">0</span></b></p>
+    <script src="index.js"></script>
+</body>
+</html>
